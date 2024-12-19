@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro'
+import coverImage from '../images/cover.jpg'
+import { Image } from 'astro:assets'
 ---
 
 <Layout>
-	<Welcome />
+  <div class="flex flex-col items-center justify-center h-screen">
+    <div class="flex flex-col lg:flex-row items-center">
+      <Image src={coverImage} alt="cover" class="w-4/5 max-h-[60vh] mb-4 object-contain" />
+      <div class="lg:w-6/12">
+        <div class="font-flourished text-center">
+          <p class="text-4xl mb-4">นายนพพร สุวรรณิก</p>
+          <p class="text-2xl">
+            ชาตะ 30 กรกฎาคม พ.ศ. 2494<br />
+            มรณะ 24 กรกฎาคม พ.ศ. 2567
+          </p>
+        </div>
+        <div class="mt-8 flex justify-center">
+          <a href="/funeral" class="bg-yellow-200 text-black px-4 py-2 rounded-lg border-2 border-yellow-600">
+            รายละเอียดงานฌาปนกิจศพ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </Layout>

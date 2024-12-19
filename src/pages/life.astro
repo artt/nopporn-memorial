@@ -1,0 +1,9 @@
+---
+import MarkdownLayout from "../layouts/MarkdownLayout.astro";
+import * as content from "../content/life.md";
+---
+<MarkdownLayout
+  title={content.frontmatter.title}
+>
+  <content.Content />
+</MarkdownLayout>
