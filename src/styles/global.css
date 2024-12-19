@@ -3,7 +3,6 @@
   src: url('/fonts/Sarabun-Light.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -11,7 +10,6 @@
   src: url('/fonts/Sarabun-LightItalic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
-  font-display: swap;
 }
 
 @font-face {
@@ -19,7 +17,6 @@
   src: url('/fonts/Sarabun-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -27,7 +24,6 @@
   src: url('/fonts/Sarabun-BoldItalic.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
-  font-display: swap;
 }
 
 @font-face {
@@ -35,7 +31,6 @@
   src: url('/fonts/Charmonman-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -43,7 +38,6 @@
   src: url('/fonts/Charmonman-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 
 html,

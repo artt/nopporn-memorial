@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import Layout from "./Layout.astro";
 
 const { title, subtitle } = Astro.props
@@ -12,5 +13,8 @@ const { title, subtitle } = Astro.props
       }
     </div>
     <slot />
+    <div class="mt-8 flex justify-center">
+      <Button href="/" label="หน้าหลัก" />
+    </div>
   </div>
 </Layout>

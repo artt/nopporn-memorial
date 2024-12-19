@@ -2,26 +2,41 @@
 import Layout from '../layouts/Layout.astro'
 import coverImage from '../images/cover.jpg'
 import { Image } from 'astro:assets'
+import NavCard from '../components/NavCard.astro'
+import Button from '../components/Button.astro'
+
+const links = [
+  { label: 'ประวัติ', href: '/life' },
+  { label: 'คำพ่อสอน', href: '/teachings' },
+  { label: 'คำไว้อาลัย', href: '/tributes' },
+  { label: 'รูปภาพ', href: '/gallery' },
+  { label: 'กลอนพ่อ', href: '/poem' },
+]
 ---
 
 <Layout>
   <div class="flex flex-col items-center justify-center h-screen">
-    <div class="flex flex-col lg:flex-row items-center">
-      <Image src={coverImage} alt="cover" class="w-4/5 max-h-[60vh] mb-4 object-contain" />
-      <div class="lg:w-6/12">
-        <div class="font-flourished text-center">
-          <p class="text-4xl mb-4">นายนพพร สุวรรณิก</p>
-          <p class="text-2xl">
-            ชาตะ 30 กรกฎาคม พ.ศ. 2494<br />
-            มรณะ 24 กรกฎาคม พ.ศ. 2567
-          </p>
-        </div>
-        <div class="mt-8 flex justify-center">
-          <a href="/funeral" class="bg-yellow-200 text-black px-4 py-2 rounded-lg border-2 border-yellow-600">
-            รายละเอียดงานฌาปนกิจศพ
-          </a>
+    <div>
+      <div class="flex flex-col lg:flex-row items-center">
+        <Image src={coverImage} alt="cover" class="w-3/5 min-w-[250px] sm:w-4/5 max-h-[60vh] mb-4 object-contain" />
+        <div class="lg:w-6/12">
+          <div class="font-flourished text-center">
+            <p class="text-4xl mb-4">นายนพพร สุวรรณิก</p>
+            <p class="text-2xl">
+              ชาตะ 30 กรกฎาคม พ.ศ. 2494<br />
+              มรณะ 24 กรกฎาคม พ.ศ. 2567
+            </p>
+          </div>
+          <div class="mt-8 flex justify-center">
+            <Button href="/funeral" label="รายละเอียดงานฌาปนกิจศพ" />
+          </div>
         </div>
       </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mt-8">
+      {links.map((link) => (
+        <NavCard {...link} />
+      ))}
     </div>
   </div>
 
