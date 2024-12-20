@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Sarabun', ...defaultTheme.fontFamily.sans],
+        sans: ['Pridi', ...defaultTheme.fontFamily.sans],
         flourished: ['Charmonman'],
       },
     },

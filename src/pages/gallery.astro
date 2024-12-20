@@ -5,7 +5,7 @@ import Album from "../components/Album/Album.astro";
 const photos = Object.values(import.meta.glob('../images/gallery/*.jpg', { eager: true })).map(photo => photo.default)
 ---
 <MarkdownLayout
-  title="ภาพความทรงจำ"
+  title="ภาพความทรงจำ | Gallery"
 >
   <Album images={photos} />
 </MarkdownLayout>
