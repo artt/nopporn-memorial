@@ -25,10 +25,10 @@ const tributes = {
 >
   {
     Object.keys(tributes).map((key) => (
-      <details>
-        <summary class="mb-8">{tributes[key].title}</summary>
+      <details open={key === 'family'}>
+        <summary class="mb-8 cursor-pointer hover:text-yellow-200 transition-colors">{tributes[key].title}</summary>
         {tributes[key].data.map((tribute) => (
-          <div class="mb-8 sm:border-2 border-slate-700 sm:rounded-lg sm:p-8">
+          <div class="mb-8 sm:border-2 border-sky-700 sm:rounded-lg sm:p-8">
             <div class="text-xl text-yellow-200">{tribute.frontmatter.title}</div>
             <div>{tribute.frontmatter.subtitle}</div>
             <tribute.Content />
