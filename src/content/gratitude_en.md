@@ -9,3 +9,5 @@ This royal benevolence bestowed upon Mr. Nopporn Suwanik is an extraordinary hon
 With deepest respect and gratitude,  
 Mrs. Supatra Suwanik  
 Mr. Suparit Suwanik
+
+<a href="/letter.jpg" target="_blank"><img src="/letter.jpg" alt="" class="w-1/3 mx-auto" /></a>

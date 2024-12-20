@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import coverImage from '../images/cropped.jpg'
+import signatureImage from '../images/signature.png'
 import { Image } from 'astro:assets'
 import NavCard from '../components/NavCard.astro'
 
@@ -16,7 +17,7 @@ const { lang="th", links } = Astro.props
 
 const text = {
   name: {
-    th: 'นายนพพร สุวรรณิก',
+    th: 'คุณนพพร สุวรรณิก',
     en: 'Nopporn Suwanik'
   },
   gratitude: {
@@ -39,20 +40,11 @@ const text = {
         </div>
         <div class="">
           <div class="text-center">
-            <p class="text-4xl mb-4 font-flourished">{text.name[lang]}</p>
-            <p class="text-2xl font-flourished">
-              {lang === "th"
-              ? <>
-                  30 กรกฎาคม พ.ศ. 2494<br />
-                  24 กรกฎาคม พ.ศ. 2567
-                </>
-              : <>
-                  30 July 1951<br />
-                  24 July 2024
-                </>
-              }
+            <p class="text-3xl md:text-4xl mb-4 font-heading text-yellow-500">{text.name[lang]}</p>
+            <p>
+              <Image src={signatureImage} alt="signature" class="!max-w-[200px] mx-auto mix-blend-screen" />
             </p>
-            <p class="mt-8">
+            <p class="mt-4 font-heading text-xl">
               {text.title[lang]}
             </p>
             <p class="">
@@ -70,7 +62,7 @@ const text = {
               }
             </p>
             <p>
-              <a href=`${lang === "en" ? "/en" : ""}/gratitude`>{text.gratitude[lang]}</a>
+              <a class="font-heading" href=`${lang === "en" ? "/en" : ""}/gratitude`>{text.gratitude[lang]}</a>
             </p>
           </div>
         </div>
@@ -81,7 +73,7 @@ const text = {
         <NavCard {...link} />
       ))}
     </div>
-    <div class="py-8">
+    <div class="py-8 font-heading">
       {lang === "th"
       ? <>
           <span class="pr-4">ไทย</span> | <span class="pl-4"><a href="/en">English</a></span>

@@ -1,46 +1,4 @@
 @font-face {
-  font-family: 'Sarabun';
-  src: url('/fonts/Sarabun-Light.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sarabun';
-  src: url('/fonts/Sarabun-LightItalic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Sarabun';
-  src: url('/fonts/Sarabun-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sarabun';
-  src: url('/fonts/Sarabun-BoldItalic.woff2') format('woff2');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Charmonman';
-  src: url('/fonts/Charmonman-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Charmonman';
-  src: url('/fonts/Charmonman-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Pridi';
   src: url('/fonts/Pridi-Light.woff2') format('woff2');
   font-weight: normal;
@@ -50,6 +8,20 @@
 @font-face {
   font-family: 'Pridi';
   src: url('/fonts/Pridi-SemiBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url('/fonts/Mitr-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url('/fonts/Mitr-SemiBold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
@@ -69,10 +41,7 @@ body {
 }
 
 h1 {
-  font-family: 'Charmonman', cursive;
-}
-
-h1 {
+  font-family: 'Mitr', sans-serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
@@ -99,6 +68,6 @@ ul ul, ol ul {
 }
 
 a {
-  @apply text-yellow-200 hover:text-orange-300;
+  @apply text-yellow-500 hover:text-yellow-400;
   transition-duration: 0.2s;
 }

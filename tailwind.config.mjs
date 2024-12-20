@@ -7,7 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Pridi', ...defaultTheme.fontFamily.sans],
-        flourished: ['Charmonman'],
+        heading: ['Mitr'],
       },
     },
   },
