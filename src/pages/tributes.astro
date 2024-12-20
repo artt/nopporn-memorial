@@ -29,7 +29,7 @@ const tributes = {
         <summary class="sticky top-0 mb-4 cursor-pointer hover:text-yellow-500 transition-colors p-4 bg-blue-900 rounded-xl">{tributes[key].title}</summary>
         {tributes[key].data.map((tribute) => (
           <div class="mb-8 mx-3 sm:border border-sky-700 sm:rounded-xl sm:p-8 sm:bg-black/20">
-            <div class="text-xl text-yellow-500">{tribute.frontmatter.title}</div>
+            <div class="text-xl text-yellow-500 font-heading">{tribute.frontmatter.title}</div>
             <div>{tribute.frontmatter.subtitle}</div>
             <tribute.Content />
           </div>
