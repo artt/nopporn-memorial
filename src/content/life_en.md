@@ -2,7 +2,7 @@
 title: Brief Biography
 ---
 
-Mr. Nopporn Suwanik was born on July 30, 1951, in Bangkok, Thailand, as the third child of Professor Emeritus Dr. Romsai Suwanik and Mrs. Kamnol Suwanik. He was one of four siblings: Mr. Wichet Suwanik (deceased), Mrs. Noavanit Bunyaketu, and Mr. Chakkaparn Suwanik.
+Mr. Nopporn Suwanik was born on July 30, 1951, in Bangkok, Thailand, as the third child of Professor Emeritus Dr. Romsai Suwanik and Mrs. Kamnol Suwanik. He was one of four siblings: Mr. Vichet Suwanik (deceased), Mrs. Noavanit Bunyaketu, and Mr. Chakkaparn Suwanik.
 
 During his childhood, Mr. Nopporn attended the Bangkok Christian College for his primary education and Triam Udom Suksa School for his high school education in Thailand. He later pursued a bachelor's degree in Mechanical Engineering at North Carolina State University (NCSU), Raleigh, USA.
 
