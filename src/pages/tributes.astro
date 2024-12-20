@@ -25,24 +25,17 @@ const tributes = {
 >
   {
     Object.keys(tributes).map((key) => (
-      <div class="mb-8">
-        <h1>{tributes[key].title}</h1>
+      <details>
+        <summary class="mb-8">{tributes[key].title}</summary>
         {tributes[key].data.map((tribute) => (
-          <div class="mb-8 border-2 border-slate-700 rounded-lg p-8">
-            <div class="text-xl">{tribute.frontmatter.title}</div>
+          <div class="mb-8 sm:border-2 border-slate-700 sm:rounded-lg sm:p-8">
+            <div class="text-xl text-yellow-200">{tribute.frontmatter.title}</div>
             <div>{tribute.frontmatter.subtitle}</div>
             <tribute.Content />
           </div>
         ))}
-      </div>
+      </details>
     ))
   }
-  <!-- {tributes.map(tribute => (
-    <div class="mb-8 border-2 border-slate-700 rounded-lg p-8">
-      <div class="text-xl">{tribute.frontmatter.title}</div>
-      <div>{tribute.frontmatter.subtitle}</div>
-      <tribute.Content />
-    </div>
-  ))} -->
   
 </MarkdownLayout>

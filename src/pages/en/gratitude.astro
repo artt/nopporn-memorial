@@ -1,0 +1,11 @@
+---
+import MarkdownLayout from "../../layouts/MarkdownLayout.astro";
+import * as content from "../../content/gratitude_en.md";
+---
+<MarkdownLayout
+  lang="en"
+  title={content.frontmatter.title}
+  subtitle={content.frontmatter.subtitle}
+>
+  <content.Content />
+</MarkdownLayout>

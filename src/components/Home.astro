@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro'
+import coverImage from '../images/cropped.jpg'
+import { Image } from 'astro:assets'
+import NavCard from '../components/NavCard.astro'
+
+interface Props {
+  lang: "th" | "en"
+  links: {
+    label: string
+    href: string
+  }[]
+}
+
+const { lang="th", links } = Astro.props
+
+const text = {
+  name: {
+    th: 'นายนพพร สุวรรณิก',
+    en: 'Nopporn Suwanik'
+  },
+  gratitude: {
+    th: "ด้วยสำนึกในพระมหากรุณาธิคุณ",
+    en: "In Grateful Remembrance of Royal Benevolence"
+  }
+}
+---
+
+<Layout>
+  <div class="flex flex-col items-center justify-center sm:h-screen mt-12">
+    <div>
+      <div class="flex flex-col lg:flex-row items-center sm:gap-4">
+        <Image src={coverImage} alt="cover" class="w-1/2 min-w-[250px] mb-4 max-h-[560px] object-contain rounded-full" />
+        <div class="flex-grow">
+          <div class="text-center">
+            <p class="text-4xl mb-4 font-flourished">{text.name[lang]}</p>
+            <p class="text-2xl font-flourished">
+              {lang === "th"
+              ? <>
+                  ชาตะ 30 กรกฎาคม พ.ศ. 2494<br />
+                  มรณะ 24 กรกฎาคม พ.ศ. 2567
+                </>
+              : <>
+                  30 July 1951<br />
+                  24 July 2024
+                </>
+              }
+            </p>
+            <p class="mt-8">
+              อนุสรณ์งานฌาปนกิจศพ
+            </p>
+            <p class="">
+              ณ วัดสระเกศ ราชวรมหาวิหาร<br />
+              เขตป้อมปราบศัตรูพ่าย กรุงเทพมหานคร<br />
+              วันที่ 22 ธันวาคม 2567<br />
+              เวลา 17.00 น.        
+            </p>
+            <p>
+              <a href=`${lang === "en" ? "/en" : ""}/gratitude`>{text.gratitude[lang]}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:block gap-4 my-8">
+      {links.map((link) => (
+        <NavCard {...link} />
+      ))}
+    </div>
+    <div class="my-8">
+      {lang === "th"
+      ? <>
+          ไทย | <a href="/en">English</a>
+        </>
+      : <>
+          <a href="/">ไทย</a> | English
+        </>
+      }
+    </div>
+  </div>
+
+</Layout>
