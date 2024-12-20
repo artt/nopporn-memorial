@@ -22,6 +22,10 @@ const text = {
   gratitude: {
     th: "ด้วยสำนึกในพระมหากรุณาธิคุณ",
     en: "In Grateful Remembrance of Royal Benevolence"
+  },
+  title: {
+    th: "อนุสรณ์งานฌาปนกิจศพ",
+    en: "Cremation Memorial"
   }
 }
 ---
@@ -47,13 +51,21 @@ const text = {
               }
             </p>
             <p class="mt-8">
-              อนุสรณ์งานฌาปนกิจศพ
+              {text.title[lang]}
             </p>
             <p class="">
-              ณ วัดสระเกศ ราชวรมหาวิหาร<br />
-              เขตป้อมปราบศัตรูพ่าย กรุงเทพมหานคร<br />
-              วันที่ 22 ธันวาคม 2567<br />
-              เวลา 17.00 น.        
+              {lang === "th"
+              ? <>
+                  ณ วัดสระเกศ ราชวรมหาวิหาร<br />
+                  เขตป้อมปราบศัตรูพ่าย กรุงเทพมหานคร<br />
+                  วันที่ 22 ธันวาคม 2567 เวลา 17.00 น.
+                </>
+              : <>
+                  Wat Saket Ratchaworamahawihan<br />
+                  Pom Prap Sattru Phai District, Bangkok<br />
+                  December 22, 2024 at 5:00 PM
+                </>
+              }
             </p>
             <p>
               <a href=`${lang === "en" ? "/en" : ""}/gratitude`>{text.gratitude[lang]}</a>
