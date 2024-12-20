@@ -1,17 +1,48 @@
 ---
 import MarkdownLayout from "../layouts/MarkdownLayout.astro";
 
-const tributes = Object.values(import.meta.glob('../content/tributes/*/*.md', { eager: true }));
+const tributes = {
+  family: {
+    title: "อาลัยรักจากครอบครัว",
+    data: Object.values(import.meta.glob('../content/tributes/family/*.md', { eager: true })),
+  },
+  friends: {
+    title: "อาลัยรักจากเพื่อน ๆ",
+    data: Object.values(import.meta.glob('../content/tributes/friends/*.md', { eager: true })),
+  },
+  colleagues: {
+    title: "อาลัยรักจากหุ้นส่วนธุรกิจและน้อง ๆ ที่ทำงาน",
+    data: Object.values(import.meta.glob('../content/tributes/colleagues/*.md', { eager: true })),
+  },
+  acquaintances: {
+    title: "อาลัยรักจากพี่ ๆ น้อง ๆ",
+    data: Object.values(import.meta.glob('../content/tributes/acquaintances/*.md', { eager: true })),
+  },
+}
 ---
 <MarkdownLayout
   title="คำไว้อาลัย"
 >
-  {tributes.map(tribute => (
+  {
+    Object.keys(tributes).map((key) => (
+      <div class="mb-8">
+        <h1>{tributes[key].title}</h1>
+        {tributes[key].data.map((tribute) => (
+          <div class="mb-8 border-2 border-slate-700 rounded-lg p-8">
+            <div class="text-xl">{tribute.frontmatter.title}</div>
+            <div>{tribute.frontmatter.subtitle}</div>
+            <tribute.Content />
+          </div>
+        ))}
+      </div>
+    ))
+  }
+  <!-- {tributes.map(tribute => (
     <div class="mb-8 border-2 border-slate-700 rounded-lg p-8">
       <div class="text-xl">{tribute.frontmatter.title}</div>
       <div>{tribute.frontmatter.subtitle}</div>
       <tribute.Content />
     </div>
-  ))}
+  ))} -->
   
 </MarkdownLayout>

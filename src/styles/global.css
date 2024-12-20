@@ -79,3 +79,8 @@ ul {
 ul ul, ol ul {
   list-style: circle;
 }
+
+a {
+  @apply text-yellow-200 hover:text-orange-300;
+  transition-duration: 0.2s;
+}

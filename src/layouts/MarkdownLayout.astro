@@ -2,9 +2,9 @@
 import Button from "../components/Button.astro";
 import Layout from "./Layout.astro";
 
-const { title, subtitle } = Astro.props
+const { lang="th", title, subtitle } = Astro.props
 ---
-<Layout>
+<Layout lang={lang}>
   <div id="markdown-content" class="max-w-3xl mx-auto pt-20 pb-20">
     <div class="mb-12">
       <h1 class="text-center">{title}</h1>
@@ -14,7 +14,7 @@ const { title, subtitle } = Astro.props
     </div>
     <slot />
     <div class="mt-8 flex justify-center">
-      <Button href="/" label="หน้าหลัก" />
+      <Button href="/" label=`${lang === "th" ? "หน้าหลัก" : "Home"}` />
     </div>
   </div>
 </Layout>
