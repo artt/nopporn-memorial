@@ -1,14 +1,17 @@
 ---
 import '../styles/global.css'
 import flowers from '../images/flowers.svg'
+
+const { lang } = Astro.props
 ---
 <!doctype html>
-<html lang="th">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={lang === "th" ? "อนุสรณ์งานฌาปนกิจศพ คุณนพพร สุวรรณิก" : "Cremation Memorial for Nopporn Suwanik"} />
     <title>นพพร สุวรรณิก</title>
   </head>
   <body class="bg-[#1B3281] text-white">
