@@ -17,7 +17,8 @@ const finalDescription = lang === "th" ? "อนุสรณ์งานฌา�
     <!-- add og tags -->
     <meta property="og:title" content={finalTitle} />
     <meta property="og:description" content={finalDescription} />
-    <meta property="og:image" content={`${Astro.site}cover${lang === "en" ? '-en' : ''}.jpg`} />
+    <meta property="og:image" content={`${Astro.site}og${lang === "en" ? '-en' : ''}.jpg`} />
+    <meta property="og:url" content={Astro.url} />
     <title>{finalTitle}</title>
   </head>
   <body class="bg-[#1B3281] text-white">
