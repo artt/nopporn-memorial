@@ -15,4 +15,4 @@ title: ด้วยสำนึกในพระมหากรุณาธิ�
 นางสุพัตรา สุวรรณิก  
 นายสุพริศร์ สุวรรณิก
 
-<a href="/letter.jpg" target="_blank"><img src="/letter.jpg" alt="" class="w-1/3 mx-auto" /></a>
+<a href="/letter.jpg" target="_blank"><img src="/letter.jpg" alt="" class="w-full max-w-[350px] mx-auto mt-8" /></a>
