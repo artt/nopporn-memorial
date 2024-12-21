@@ -2,7 +2,8 @@
 import '../styles/global.css'
 import flowers from '../images/flowers.svg'
 
-const { lang } = Astro.props
+const { lang, title } = Astro.props
+const mainTitle = lang === "th" ? "นพพร สุวรรณิก" : "Nopporn Suwanik"
 ---
 <!doctype html>
 <html lang={lang}>
@@ -11,7 +12,7 @@ const { lang } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={lang === "th" ? "อนุสรณ์งานฌาปนกิจศพ คุณนพพร สุวรรณิก" : "Cremation Memorial for Nopporn Suwanik"} />
-    <title>นพพร สุวรรณิก</title>
+    <title>{title ? `${title} | ${mainTitle}` : mainTitle}</title>
   </head>
   <body class="bg-[#1B3281] text-white">
     <div class="vignette" style={{overscrollBehavior: "none"}}>

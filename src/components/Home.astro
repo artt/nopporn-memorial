@@ -31,7 +31,7 @@ const text = {
 }
 ---
 
-<Layout>
+<Layout lang={lang}>
   <div class="flex flex-col items-center justify-center lg:h-screen py-12">
     <div>
       <div class="grid grid-cols-1 lg:grid-cols-[min-content_1fr] gap-4 lg:gap-12">
@@ -40,8 +40,8 @@ const text = {
         </div>
         <div class="">
           <div class="text-center">
-            <p class="-mb-4">In loving memory of</p>
-            <p class="text-3xl md:text-4xl mb-4 font-heading text-yellow-500">{text.name[lang]}</p>
+            <p>In loving memory of</p>
+            <h1 class="text-3xl md:text-4xl -mt-4 mb-4 font-heading">{text.name[lang]}</h1>
             <p>
               <Image src={signatureImage} alt="signature" class="!max-w-[200px] mx-auto mix-blend-screen" style={{transform: "translate3d(0, 0, 0)"}} />
             </p>

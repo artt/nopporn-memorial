@@ -4,7 +4,7 @@ import Layout from "./Layout.astro";
 
 const { lang="th", title, subtitle } = Astro.props
 ---
-<Layout lang={lang}>
+<Layout lang={lang} title={title}>
   <div id="markdown-content" class="max-w-3xl mx-auto pt-20 pb-20">
     <div class="mb-12">
       <h1 class="text-center">{title}</h1>
