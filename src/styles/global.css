@@ -46,6 +46,10 @@ h1 {
   line-height: 2.5rem;
 }
 
+h2 {
+  font-family: 'Mitr', sans-serif;
+}
+
 p {
   margin-block: 1rem;
 }
