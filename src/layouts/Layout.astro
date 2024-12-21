@@ -19,6 +19,11 @@ const finalDescription = lang === "th" ? "อนุสรณ์งานฌา�
     <meta property="og:description" content={finalDescription} />
     <meta property="og:image" content={`${Astro.site}og${lang === "en" ? '-en' : ''}.jpg`} />
     <meta property="og:url" content={Astro.url} />
+    <!-- add twitter tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={finalTitle} />
+    <meta name="twitter:description" content={finalDescription} />
+    <meta name="twitter:image" content={`${Astro.site}og${lang === "en" ? '-en' : ''}.jpg`} />
     <title>{finalTitle}</title>
   </head>
   <body class="bg-[#1B3281] text-white">
