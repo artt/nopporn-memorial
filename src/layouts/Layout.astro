@@ -4,6 +4,8 @@ import flowers from '../images/flowers.svg'
 
 const { lang, title } = Astro.props
 const mainTitle = lang === "th" ? "นพพร สุวรรณิก" : "Nopporn Suwanik"
+const finalTitle = title ? `${title} | ${mainTitle}` : mainTitle
+const finalDescription = lang === "th" ? "อนุสรณ์งานฌาปนกิจศพ คุณนพพร สุวรรณิก" : "Cremation Memorial for Nopporn Suwanik"
 ---
 <!doctype html>
 <html lang={lang}>
@@ -11,8 +13,12 @@ const mainTitle = lang === "th" ? "นพพร สุวรรณิก" : "Nop
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={lang === "th" ? "อนุสรณ์งานฌาปนกิจศพ คุณนพพร สุวรรณิก" : "Cremation Memorial for Nopporn Suwanik"} />
-    <title>{title ? `${title} | ${mainTitle}` : mainTitle}</title>
+    <meta name="description" content={finalDescription} />
+    <!-- add og tags -->
+    <meta property="og:title" content={finalTitle} />
+    <meta property="og:description" content={finalDescription} />
+    <meta property="og:image" content={`${Astro.site}cover${lang === "en" ? '-en' : ''}.jpg`} />
+    <title>{finalTitle}</title>
   </head>
   <body class="bg-[#1B3281] text-white">
     <div class="vignette" style={{overscrollBehavior: "none"}}>

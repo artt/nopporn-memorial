@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         sans: ['Pridi', ...defaultTheme.fontFamily.sans],
         heading: ['Mitr'],
+        default: defaultTheme.fontFamily.sans,
       },
     },
   },
