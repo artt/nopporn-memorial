@@ -10,4 +10,4 @@ With deepest respect and gratitude,
 Mrs. Supatra Suwanik  
 Mr. Suparit Suwanik
 
-<a href="/letter.jpg" target="_blank"><img src="/letter.jpg" alt="" class="w-1/3 mx-auto" /></a>
+<a href="/letter.jpg" target="_blank"><img src="/letter.jpg" alt="" class="w-full mx-auto mt-8 rounded-md" /></a>

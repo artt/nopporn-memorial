@@ -1,0 +1,41 @@
+---
+import MarkdownLayout from "../layouts/MarkdownLayout.astro";
+
+const eulogies = {
+  family: {
+    title: "อาลัยรักจากครอบครัว",
+    data: Object.values(import.meta.glob('../content/eulogies/family/*.md', { eager: true })),
+  },
+  friends: {
+    title: "อาลัยรักจากเพื่อน ๆ",
+    data: Object.values(import.meta.glob('../content/eulogies/friends/*.md', { eager: true })),
+  },
+  colleagues: {
+    title: "อาลัยรักจากหุ้นส่วนธุรกิจและน้อง ๆ ที่ทำงาน",
+    data: Object.values(import.meta.glob('../content/eulogies/colleagues/*.md', { eager: true })),
+  },
+  acquaintances: {
+    title: "อาลัยรักจากพี่ ๆ น้อง ๆ",
+    data: Object.values(import.meta.glob('../content/eulogies/acquaintances/*.md', { eager: true })),
+  },
+}
+---
+<MarkdownLayout
+  title="คำไว้อาลัย"
+>
+  {
+    Object.keys(eulogies).map((key) => (
+      <details open={key === 'family'}>
+        <summary class="sticky top-0 mb-4 cursor-pointer hover:text-yellow-500 transition-colors p-4 bg-blue-900 rounded-xl font-heading">{eulogies[key].title}</summary>
+        {eulogies[key].data.map((eulogy) => (
+          <div class="mb-8 mx-3 sm:border border-sky-700 sm:rounded-xl sm:p-8 sm:bg-black/20">
+            <div class="text-xl text-yellow-500">{eulogy.frontmatter.title}</div>
+            <div>{eulogy.frontmatter.subtitle}</div>
+            <eulogy.Content />
+          </div>
+        ))}
+      </details>
+    ))
+  }
+  
+</MarkdownLayout>
